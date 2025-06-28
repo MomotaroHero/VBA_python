@@ -2,16 +2,12 @@ from DailyReport import DailyReport
 from ReportGen_SendMail import ReportGenerator
 
 # Example usage
-if __name__ == "__main__":
-    # report_gen = ReportGenerator()
-    # report_gen.control_main(mode="solo")  # Run immediately
-    # report_gen.control_main(mode="sch")  # Run on schedule
-    
+if __name__ == "__main__":    
     report_gen = None
     daily_report = None
     try:        
-        # daily_report = DailyReport()
-        # daily_report.control_main(mode="solo")
+        daily_report = DailyReport()
+        daily_report.control_main(mode="solo")
         report_gen = ReportGenerator()
         report_gen.control_main(mode="solo")
     except Exception as e:
